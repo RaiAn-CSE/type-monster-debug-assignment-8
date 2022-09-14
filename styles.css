@@ -200,7 +200,7 @@ button {
   top: 0;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 688px) {
   .box-container {
     padding: 0 20px;
     width: 100%;
@@ -209,23 +209,29 @@ button {
   .card {
     flex-direction: column;
   }
-}
+} */
 
 
-/* Footer  */
-footer {
-  color: rgba(255, 255, 255, 0.772);
-  text-align: center;
-  background-color: black;
-  padding: 20px;
-}
-
-
-/* Responsive for mobile device */
+/* ----------------------------------  (Responsive for mobile device) */
 @media screen and (max-width:688px) {
+  .box-container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
   #histories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+}
+
+/* --------------------------------------- ( Responsive for iPad View)  */
+@media only screen and (min-width:688px) and (max-width:992px) {
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
   }
 }
