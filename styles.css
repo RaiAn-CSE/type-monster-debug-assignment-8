@@ -151,6 +151,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -170,7 +171,6 @@ button {
       rgba(255, 255, 255, 0.1) 0.18%,
       rgba(255, 255, 255, 0.05) 99.85%);
   backdrop-filter: blur(5px);
-  margin-bottom: 30px;
 }
 
 #modal-background {
@@ -196,14 +196,11 @@ button {
   }
 }
 
-
-
-/* Responsive  */
-
-/* @media screen and (max-width:688px) {
+/* Responsive for mobile device */
+@media screen and (max-width:688px) {
   #histories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-} */
+}
