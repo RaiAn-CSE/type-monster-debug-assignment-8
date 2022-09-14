@@ -204,3 +204,18 @@ button {
     justify-content: space-around;
   }
 }
+
+
+/* Footer  */
+.span-class {
+  background-color: #0d6efd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.772);
+  text-align: center;
+  background-color: black;
+  padding: 20px;
+}
