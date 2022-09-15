@@ -50,35 +50,32 @@
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Difference between var, let,const.
+                            Difference between local-storage and session-storage :
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>
-                                Var <br>
-                                <hr>
-                                • The scope of a var variable is functional scope.<br>
-                                • It can be updated and re-declared into the scope.<br>
-                                • It can be declared without initialization.<br>
-                                • It can be accessed without initialization as its default value is “undefined”.<br><br>
-                                Let<br>
-                                <hr>
-                                • The scope of a let variable is block scope.<br>
-                                • It can be updated but cannot be re-declared into the scope.<br>
-                                • It can be declared without initialization.<br>
-                                • It cannot be accessed without initialization otherwise it will give
-                                ‘referenceError’.<br><br>
-                                Const<br>
-                                <hr>
-                                • The scope of a const variable is block scope.<br>
-                                • It cannot be updated or re-declared into the scope.<br>
-                                • It cannot be declared without initialization.<br>
-                                • It cannot be accessed without initialization, as it cannot be declared without
-                                initialization.
+                                SessionStorage is similar to LocalStorage ; the difference is that while data in
+                                localStorage doesn't expire, data in sessionStorage is cleared when the page session
+                                ends. Whenever a document is loaded in a particular tab in the browser, a unique page
+                                session gets created and assigned to that particular tab.<br><br>
+                                Local Storage:<br>
+                                The storage capacity of local storage is 5MB/10MB.<br>
+                                As it is not session-based, it must be deleted via javascript or manually.<br>
+                                The client can only read local storage.<br>
+                                There is no transfer of data to the server.<br>
+                                There are fewer old browsers that support it.<br><br>
+                                Session Storage:<br>
+                                The storage capacity of session storage is 5MB.<br>
+                                It’s session-based and works per window or tab.<br> This means that data is stored only
+                                for
+                                the duration of a session, i.e., until the browser (or tab) is closed.<br>
+                                The client can only read local storage.<br>
+                                There is no transfer of data to the server.<br>
+                                There are fewer old browsers that support it.<br>
                             </p>
-
                         </div>
                     </div>
                 </div>
@@ -86,46 +83,21 @@
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Difference between Arrayfunction and Regular function in javascript.
+                            Difference between global scope and block scope.
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>
-                                Arguments objects are not available in arrow functions, but are available in regular
-                                functions.<br>
-                                Regular functions created using function declarations or expressions are ‘constructible’
-                                and ‘callable’. Since regular functions are constructible, they can be called using the
-                                ‘new’ keyword. However, the arrow functions are only ‘callable’ and not constructible.
-                                Thus, we will get a run-time error on trying to construct a non-constructible arrow
-                                functions using the new keyword.<br><br>
-
-                                Regular functions:<br>
-                                <hr>
-                                Syntax of regular functions:-<br>
-                                let x = function function_name(parameters){<br>
-                                // body of the function<br>
-                                };<br>
-
-                                Example of regular functions:-<br>
-                                let square = function(x){<br>
-                                return (x*x);<br>
-                                };<br>
-                                console.log(square(9)); (9));<br><br>
-
-                                Arrow functions:<br>
-                                <hr>
-                                The syntax of arrow functions:-<br>
-                                let x = (parameters) => {<br>
-                                // body of the function<br>
-                                };<br>
-
-                                Example of arrow functions:-<br>
-                                var square = (x) => {<br>
-                                return (x*x);<br>
-                                };<br>
-                                console.log(square(9));<br>
+                                Global scope: Global scope contains all of the things defined outside of all code
+                                blocks. A code block simply consists of grouped statements inside curly braces ({ }). if
+                                statement, loops, function are examples of structure that create a code block. A global
+                                variable has global scope. A global variable is accessible from anywhere in the
+                                code.<br>
+                                Block Scope: A variable when declared inside the if or switch conditions or inside for
+                                or while loops, are accessible within that particular condition or loop. To be consise
+                                the variables declared inside the curly braces are called as within block scope.
                             </p>
                         </div>
                     </div>
@@ -134,41 +106,19 @@
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Difference between map(),forEach(),filter() & find() in javascript.
+                            How to work JS event loop?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>
-                                Map():<br>
-                                <hr>
-                                Definition and Usage. map() creates a new array from calling a function for every array
-                                element. map() calls a function once for each element in an array. map() does not
-                                execute the function for empty elements. map() does not change the original
-                                array.<br><br>
+                                The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If
+                                the Call Stack is empty, the Event Loop will take the first event from the queue and
+                                will push it to the Call Stack, which effectively runs it. <br>
+                                Such an iteration is called a tick in the Event Loop. Each event is just a function
+                                callback.
 
-                                forEach():<br>
-                                <hr>
-                                The forEach() method executes a provided function once for each array element.<br>
-                                forEach() calls a provided callbackFn function once for each element in an array in
-                                ascending index order. It is not invoked for index properties that have been deleted or
-                                are uninitialized.<br><br>
-
-                                Filter():<br>
-                                <hr>
-                                The filter() method creates a new array filled with elements that pass a test provided
-                                by a function.<br>
-                                The filter() method does not execute the function for empty elements.<br>
-                                The filter() method does not change the original array.<br><br>
-
-                                Find():<br>
-                                <hr>
-                                The find() method returns the value of the first element that passes a test.<br>
-                                The find() method executes a function for each array element.<br>
-                                The find() method returns undefined if no elements are found.<br>
-                                The find() method does not execute the function for empty elements.<br>
-                                The find() method does not change the original array.
                             </p>
                         </div>
                     </div>
@@ -177,25 +127,57 @@
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Why are template strings used?
+                            What does the reason we get undefined?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p>
-                                Template literals are sometimes informally called template strings, because they are
-                                used most commonly for string interpolation (to create strings by doing substitution of
-                                placeholders).<br>
+                                Undefined:<br>
+                                Undefined is also a primitive value in JavaScript. A variable or an object has an
+                                undefined value when no value is assigned before using it. So you can say that undefined
+                                means lack of value or unknown value.<br><br>
 
-                                Template literals (template strings) allow you to use strings or embedded expressions in
-                                the form of a string. They are enclosed in backticks `` . For example, const name =
-                                'Jack'; console.<br>
+                                Example: undefined<br>
+                                var myVar;<br>
+                                alert(myVar); // undefined<br>
+                                In the above example, we have not assigned any value to a variable named 'myVar'. A
+                                variable 'myVar' lacks a value. So it is undefined.<br>
 
-                                Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
-                                insert/interpolate variables and expressions into strings without needing to concatenate
-                                like in older versions of JavaScript. It allows us to create strings that are complex
-                                and contain dynamic elements.<br>
+                                You will get undefined value when you call a non-existent property or method of an
+                                object.<br><br>
+
+                                Example: undefined<br>
+                                function Sum(val1, val2)<br>
+                                {<br>
+                                var result = val1 + val2;<br>
+                                }<br>
+
+                                var result = Sum(5, 5);<br>
+                                alert(result);// undefined<br>
+                                In the above example, a function Sum does not return any result but still we try to
+                                assign its resulted value to a variable. So in this case, result will be undefined.<br>
+
+                                If you pass less arguments in function call then, that parameter will have undefined
+                                value.<br><br>
+
+                                Example: undefined<br>
+                                function Sum(val1, val2)<br>
+                                {<br>
+                                return val1 + val2; // val2 is undefined<br>
+                                }<br>
+
+                                Sum(5);<br>
+                                An undefined evaluates to false when used in conditional expression.<br>
+
+                                Example: undefined in Conditional Expression.<br>
+                                var myVar;<br>
+
+                                if (myVar)<br>
+                                alert("myVar evaluates to true");<br>
+                                else<br>
+                                alert("myVar evaluates to false");<br>
                             </p>
                         </div>
                     </div>
